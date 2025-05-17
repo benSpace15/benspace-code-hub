@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { Github, Twitter, Linkedin, Youtube } from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="bg-gradient-to-r from-neon-purple to-neon-blue rounded-md p-1">
-                <span className="font-space font-bold text-white">B</span>
-              </div>
+              <Avatar className="h-8 w-8 border border-neon-blue/30">
+                <AvatarImage src="/lovable-uploads/bdf2d047-a40e-42c3-b8cb-0178c83d46ee.png" alt="BenSpace Logo" />
+                <AvatarFallback className="bg-gradient-to-r from-neon-purple to-neon-blue rounded-full">
+                  <span className="font-space font-bold text-white text-xs">B</span>
+                </AvatarFallback>
+              </Avatar>
               <span className="font-space font-bold text-xl tracking-tight">
                 Ben<span className="text-neon-blue">Space</span>
               </span>

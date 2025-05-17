@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Calendar, BookText, User, Mail, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,9 +24,12 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
-            <div className="bg-gradient-to-r from-neon-purple to-neon-blue rounded-md p-1">
-              <span className="font-space font-bold text-white">B</span>
-            </div>
+            <Avatar className="h-10 w-10 border-2 border-neon-blue/30 bg-dark">
+              <AvatarImage src="/lovable-uploads/bdf2d047-a40e-42c3-b8cb-0178c83d46ee.png" alt="BenSpace Logo" />
+              <AvatarFallback className="bg-gradient-to-r from-neon-purple to-neon-blue rounded-full">
+                <span className="font-space font-bold text-white">B</span>
+              </AvatarFallback>
+            </Avatar>
             <span className="font-space font-bold text-xl tracking-tight hidden sm:block">
               Ben<span className="text-neon-blue">Space</span>
             </span>

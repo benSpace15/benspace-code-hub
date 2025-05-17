@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import GlowCard from '@/components/ui/GlowCard';
 import NeonButton from '@/components/ui/NeonButton';
 import PageTransition from '@/components/layout/PageTransition';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
 const About = () => {
   return (
@@ -28,11 +29,16 @@ const About = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-neon-blue to-neon-purple opacity-20 blur-xl"></div>
               <div className="relative h-full w-full bg-gradient-to-r from-neon-blue to-neon-purple rounded-full p-1">
                 <div className="rounded-full h-full w-full overflow-hidden bg-dark">
-                  <img 
-                    src="https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&q=80" 
-                    alt="BenSpace Portrait" 
-                    className="w-full h-full object-cover"
-                  />
+                  <Avatar className="h-full w-full">
+                    <AvatarImage 
+                      src="/lovable-uploads/bdf2d047-a40e-42c3-b8cb-0178c83d46ee.png" 
+                      alt="BenSpace Portrait" 
+                      className="w-full h-full object-cover"
+                    />
+                    <AvatarFallback className="bg-dark">
+                      <div className="bg-gradient-to-r from-neon-blue to-neon-purple rounded-full p-1">B</div>
+                    </AvatarFallback>
+                  </Avatar>
                 </div>
               </div>
             </div>

@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Calendar, MapPin, Filter, Search } from 'lucide-react';
 
@@ -25,79 +24,79 @@ const Events = () => {
   const [locationFilter, setLocationFilter] = useState('all');
   const [showFilters, setShowFilters] = useState(false);
 
-  // Sample events data
+  // Updated events data for Summer 2025
   useEffect(() => {
     const eventsData: Event[] = [
       {
         id: 1,
-        title: "React Global Summit",
-        date: "2024-08-12",
-        location: "Berlin, Germany",
+        title: "Global React Summer Summit",
+        date: "2025-06-15",
+        location: "Barcelona, Spain",
         isOnline: false,
-        description: "A three-day conference focused on React ecosystem with workshops and networking opportunities.",
+        description: "The premier summer React conference featuring the latest developments, workshops, and networking with React core team members.",
         category: "conference"
       },
       {
         id: 2,
-        title: "Inclusive AI Hackathon",
-        date: "2024-09-05",
+        title: "Sustainable Tech Hackathon",
+        date: "2025-07-10",
         location: "Online",
         isOnline: true,
-        description: "Build AI solutions that address accessibility challenges in technology. $10,000 in prizes.",
+        description: "Build solutions addressing climate change and sustainability challenges using emerging technologies. $15,000 in prizes.",
         category: "hackathon"
       },
       {
         id: 3,
-        title: "TypeScript Deep Dive Workshop",
-        date: "2024-07-22",
+        title: "Advanced TypeScript & Web Assembly Workshop",
+        date: "2025-06-22",
         location: "Online",
         isOnline: true,
-        description: "Master advanced TypeScript features with hands-on exercises and expert guidance.",
+        description: "Dive deep into TypeScript 6.0 features and learn how to integrate WebAssembly for high-performance web applications.",
         category: "workshop"
       },
       {
         id: 4,
-        title: "International Coding Competition",
-        date: "2024-10-15",
-        location: "Tokyo, Japan",
+        title: "International Algorithm Championship",
+        date: "2025-08-05",
+        location: "Seoul, South Korea",
         isOnline: false,
-        description: "Annual algorithmic programming contest with participants from over 50 countries.",
+        description: "The world's most prestigious competitive programming contest with participants from top universities and tech companies.",
         category: "contest"
       },
       {
         id: 5,
-        title: "Data Science & ML Conference",
-        date: "2024-09-18",
-        location: "San Francisco, USA",
+        title: "AI & ML Innovation Summit",
+        date: "2025-07-25",
+        location: "Austin, USA",
         isOnline: false,
-        description: "The largest gathering of data scientists and machine learning practitioners in the industry.",
+        description: "Explore the bleeding edge of artificial intelligence and machine learning with hands-on labs and expert presentations.",
         category: "conference"
       },
       {
         id: 6,
-        title: "Open Source Contributors Meetup",
-        date: "2024-07-30",
+        title: "Open Source Summer Fest",
+        date: "2025-06-30",
         location: "Online",
         isOnline: true,
-        description: "Connect with maintainers of popular open-source projects and learn how to contribute effectively.",
+        description: "A month-long celebration of open source with daily challenges, mentorship opportunities, and collaboration sessions.",
         category: "meetup"
       },
       {
         id: 7,
-        title: "Cybersecurity Challenge",
-        date: "2024-08-25",
-        location: "London, UK",
+        title: "Quantum Computing Workshop",
+        date: "2025-08-15",
+        location: "Zurich, Switzerland",
         isOnline: false,
-        description: "Test your security skills in this intensive 48-hour capture-the-flag competition.",
-        category: "contest"
+        description: "Practical introduction to quantum algorithms and programming quantum computers with IBM Q System experts.",
+        category: "workshop"
       },
       {
         id: 8,
-        title: "DevOps & Cloud Native Summit",
-        date: "2024-11-10",
+        title: "Cloud Native Summer Conference",
+        date: "2025-07-18",
         location: "Singapore",
         isOnline: false,
-        description: "Expert talks on containerization, Kubernetes, and cloud infrastructure management.",
+        description: "Focus on microservices, serverless, and cloud infrastructure optimization for the modern enterprise.",
         category: "conference"
       },
     ];

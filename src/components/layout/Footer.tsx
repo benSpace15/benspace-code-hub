@@ -35,7 +35,7 @@ const Footer = () => {
               <a href="https://linkedin.com/in/benspace" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-neon-blue transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="https://youtube.com/@benspace" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-neon-blue transition-colors">
+              <a href="https://www.youtube.com/channel/UCXFd_gjvWzyHZDSZdY2aauw" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-muted-foreground hover:text-neon-purple transition-colors">
                 <Youtube className="h-5 w-5" />
               </a>
             </div>
@@ -56,6 +56,12 @@ const Footer = () => {
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-neon-blue transition-colors">About</Link>
               </li>
+              <li>
+                <Link to="/newsletter" className="text-muted-foreground hover:text-neon-blue transition-colors">Newsletter</Link>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/channel/UCXFd_gjvWzyHZDSZdY2aauw" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-neon-purple transition-colors">YouTube Channel</a>
+              </li>
             </ul>
           </div>
 
@@ -63,16 +69,16 @@ const Footer = () => {
             <h3 className="font-space font-medium text-sm mb-4">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-neon-blue transition-colors">Coding Tutorials</a>
+                <Link to="/blog" className="text-muted-foreground hover:text-neon-blue transition-colors">Coding Tutorials</Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-neon-blue transition-colors">Programming Books</a>
+                <Link to="/blog" className="text-muted-foreground hover:text-neon-blue transition-colors">Programming Books</Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-neon-blue transition-colors">Development Tools</a>
+                <Link to="/blog" className="text-muted-foreground hover:text-neon-blue transition-colors">Development Tools</Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-neon-blue transition-colors">Community Forums</a>
+                <Link to="/blog" className="text-muted-foreground hover:text-neon-blue transition-colors">Community Forums</Link>
               </li>
             </ul>
           </div>

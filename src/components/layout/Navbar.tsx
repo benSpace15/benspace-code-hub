@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Home, Calendar, BookText, User, Mail, Menu, X } from 'lucide-react';
+import { Home, Calendar, BookText, User, Mail, Menu, X, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 
@@ -14,6 +14,7 @@ const Navbar = () => {
     { name: 'Blog', path: '/blog', icon: <BookText className="h-4 w-4" /> },
     { name: 'About', path: '/about', icon: <User className="h-4 w-4" /> },
     { name: 'Newsletter', path: '/newsletter', icon: <Mail className="h-4 w-4" /> },
+    { name: 'YouTube', path: 'https://www.youtube.com/channel/UCXFd_gjvWzyHZDSZdY2aauw', icon: <Youtube className="h-4 w-4" />, external: true },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -39,14 +40,27 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1">
           {links.map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.path}
-              className="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {link.icon}
-              <span className="ml-2">{link.name}</span>
-            </Link>
+            link.external ? (
+              <a 
+                key={link.name} 
+                href={link.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.icon}
+                <span className="ml-2">{link.name}</span>
+              </a>
+            ) : (
+              <Link 
+                key={link.name} 
+                to={link.path}
+                className="flex items-center px-4 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              >
+                {link.icon}
+                <span className="ml-2">{link.name}</span>
+              </Link>
+            )
           ))}
         </nav>
 
@@ -66,15 +80,29 @@ const Navbar = () => {
           <div className="absolute top-16 left-0 w-full bg-dark-secondary border-b border-white/10 py-2 md:hidden">
             <div className="flex flex-col space-y-1 px-4">
               {links.map((link) => (
-                <Link 
-                  key={link.name} 
-                  to={link.path} 
-                  className="flex items-center py-3 px-4 text-sm font-medium hover:bg-white/5 rounded-md"
-                  onClick={closeMenu}
-                >
-                  {link.icon}
-                  <span className="ml-3">{link.name}</span>
-                </Link>
+                link.external ? (
+                  <a 
+                    key={link.name} 
+                    href={link.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center py-3 px-4 text-sm font-medium hover:bg-white/5 rounded-md"
+                    onClick={closeMenu}
+                  >
+                    {link.icon}
+                    <span className="ml-3">{link.name}</span>
+                  </a>
+                ) : (
+                  <Link 
+                    key={link.name} 
+                    to={link.path} 
+                    className="flex items-center py-3 px-4 text-sm font-medium hover:bg-white/5 rounded-md"
+                    onClick={closeMenu}
+                  >
+                    {link.icon}
+                    <span className="ml-3">{link.name}</span>
+                  </Link>
+                )
               ))}
             </div>
           </div>
